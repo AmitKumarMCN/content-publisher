@@ -1,13 +1,19 @@
 :root {
-	--primaryColor:#5589FF;
-	--secondaryColor:#FF8319;
-	--successColor:#0cd455;
-	--dangerColor:#e30000;
-	--infoColor:#2460E8;
-	--txtColor:#626262;
-	--bgColor:#F8F8F8;
-	--headingColor:#707070;
-	--bdrColor:#D0D0D0;
+
+ --bodyBg: #091227;
+   --boxbg: #141d36;
+--headingColor: #bcdbfe;
+   --boxlightbg: #2a3554;
+   --AIinputBg: #a4bcd9;
+   --headerBg: #17264b;
+        --fontColor: #9ab9dc;
+  --textlighter: #7f8aab;
+  --bdrColor: #555f7d75;
+      --mainBlue: #0086dc;
+    --mainGreen: #2de735;
+    --mainRed: #f14035;
+    --mainOrange: #f60;
+    --mainGray: #dcdcdc;
 }
 * {
 	margin: 0;
@@ -24,7 +30,7 @@ a, a:hover{
 .Content_Pulisher{
 	width: 100%;
     height: 100%;
-    background-color: rgba(255,255,255,1);
+    background-color: var(--bodyBg);
     overflow: hidden;
 }
 .top-wrap{
@@ -32,7 +38,7 @@ a, a:hover{
 	padding-left:15px;
 	padding-right:15px;
 	height:60px;
-	background:#F9F9F9;
+	background:var(--boxbg);
 	line-height:60px;
 	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.12);
 }
@@ -49,7 +55,7 @@ a, a:hover{
 }
 .side-left, .side-right{
 	width:calc(50% - 15px);
-	color: #707070;
+	color: var(--fontColor);
 	text-transform: uppercase;
 	font-size:18px;
 }
@@ -72,7 +78,7 @@ a, a:hover{
 	cursor: pointer;
 	width:50px;
 	height:26px;
-	border: 1px solid var(--primaryColor);
+	border: 1px solid var(--mainBlue);
 	border-radius: 100px;
 	position: relative;
 	color: transparent;
@@ -86,13 +92,13 @@ a, a:hover{
     left: 4px;
     width: 18px;
     height: 18px;
-    background: var(--primaryColor);
+    background: var(--mainBlue);
     border-radius: 90px;
     transition: 0.3s;
 }
 
 .toggle-icon input:checked + label {
-	border: 1px solid var(--primaryColor);
+	border: 1px solid var(--mainBlue);
 	background:#fff;
 }
 
@@ -131,21 +137,24 @@ a, a:hover{
 	position: absolute;
 	top:5px;
 	right:5px;
+	display: none;
 }
 
 .input-control{
 	width:100%;
 	min-width:400px;
 	max-width:680px;
-	height:48px;
-	border: 1px solid #D0D0D0;
-	color:var(--txtColor);
 	font-size:16px;
 	padding:12px;
 	font-family:Open Sans;
 	margin-bottom:12px;
 	outline:0;
-	border-radius:3px;
+	min-height: 40px;
+	border: 1px solid var(--bdrColor);
+	color: var(--fontColor);
+	border-radius:6px;
+	padding: 5px 15px;
+	background-color: #0f172a;
 }
 
 .input-control:focus{
@@ -155,8 +164,8 @@ input:disabled{
 	cursor:default;
 	disabled: true;
 	background-color: transparent;
-	color: #ddd;
-	border:1px solid #ddd;
+	    color: var(--bdrColor);
+    border: 1px solid var(--bdrColor);
 }
 
 .form-continar textarea {
@@ -170,7 +179,7 @@ select.input-control:invalid {
 }
 
 .note{
-	color: var(--dangerColor);
+	color: var(--mainRed);
 	text-align: left;
 	margin-left:12px;
 	font-size:12px;
@@ -193,14 +202,14 @@ select.input-control:invalid {
 	text-align: center;
 	width:100%;
 	margin:10px auto;
-	color:var(--txtColor);
+	color:var(--textlighter);
 }
 .actionBottomBtns{
 	margin:30px auto;
 	text-align: center;
 	margin-top:80px;
 	margin-bottom:50px;
-	border-top:1px solid #f1f1f1;
+	border-top:1px solid var(--bdrColor);
 	padding-top:50px;
 }
 
@@ -217,7 +226,7 @@ select.input-control:invalid {
 .CommonBlueBtn {
     font-size: 18px;
     color: #fff;
-    background-color: var(--primaryColor);
+    background-color: var(--mainBlue);
     border: none;
     padding: 8px 20px;
     cursor: pointer;
@@ -234,14 +243,15 @@ select.input-control:invalid {
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.24);
 }
 .fileuploader{
-	border:1px dashed rgba(85, 137, 255, 0.34901960784313724);
+	border:1px dashed rgba(237, 240, 246, 0.349);
 	padding:25px;
 	border-radius:5px;
 	text-align: center;
 	margin-top:20px;
+	color: var(--fontColor);
 }
 .btn-fileUploader{
-	background-color: var(--primaryColor);
+	background-color: var(--mainBlue);
 	padding: 8px 40px;
 	margin-top:30px;
 }
@@ -262,19 +272,20 @@ select.input-control:invalid {
 	opacity:0.8;
 }
 .txt-fileupload span{
-   color: var(--primaryColor);
+   color: var(--mainBlue);
 }
 .btn-publish{
-	    background-color: var(--successColor);;
+	    background-color: var(--mainGreen);;
 }
 .btn-cancel{
     background-color: transparent;
-    color: var(--primaryColor);
-    border:1px solid var(--primaryColor);
+    color: var(--mainBlue);
+    border:1px solid var(--mainBlue);
 }
 
 #uploadlists:empty{display: none;}
 #uploadlists{
 	margin-top:10px;
 	margin-left:20px;
+	color: var(--fontColor);
 }
