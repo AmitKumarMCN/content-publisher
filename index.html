@@ -4,8 +4,7 @@
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>content-publisher</title>
-<!-- <link rel="stylesheet" type="text/css" href="mystyleshhetold.css"/> -->
+<title>C# Corner Content publisher</title>
 <link rel="stylesheet" type="text/css" href="mystyleshhet.css"/>
 </head>
 <body>
@@ -21,39 +20,57 @@
 		</div>
 		</div>
 	</div>
+<div class="heading" style="color: #bcdbfe; font-size: 1.5rem; font-weight: 600; text-align: center; margin-top: 30px; margin-bottom: 15px;">
+	Provide Content Details
+</div>
 
-	<div class="form-continar">
+<div class="form-continar">
 		<form action="#" method="">
+			
 			<div class="form-group">
-				<input type="text" name="articletitle" class="input-control" placeholder="Enter Title">
+				<div class="checkbox-wrapper">
+					<label class="checkbox-list" for="articleCheckbox">
+							<span>Article</span>
+							<div class="custom-checkbox">
+								<input type="checkbox" id="articleCheckbox"/>
+								<span class="checkbox"></span>
+							</div>
+					</label>
+						<label class="checkbox-list" for="videoCheckbox">
+							<span>Video</span>
+							<div class="custom-checkbox">
+								<input type="checkbox" id="videoCheckbox"/>
+								<span class="checkbox"></span>
+							</div>
+					</label>
+						<label class="checkbox-list" for="embedVideoCheckbox">
+							<span>Embed a Video</span>
+							<div class="custom-checkbox">
+								<input type="checkbox" id="embedVideoCheckbox"/>
+								<span class="checkbox"></span>
+							</div>
+					</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<input type="text" name="articletitle" class="input-control post-title" placeholder="Enter Title">
 				<div class="icons-holder emoji-sec">
 					<img src="images/happy.png" alt="">
 					<!-- emoji code here-->
 				</div>
 			</div>
-				<textarea name="description" id="description" placeholder="Description" class="input-control"></textarea>
+			<div class="form-group">
+				<textarea name="description" id="description" placeholder="Enter Description" class="input-control"></textarea>
+				</div>
+
 				<div class="form-group">
-				<textarea name="keywords" id="keywords" placeholder="Keywords" class="input-control"></textarea>
-				<div class="icons-holder emoji-sec">
-					<img src="images/info.png" alt="" title="Search engines can search your article by these keywords. All keywords must be seperated by commas.">
-				</div>
+				<textarea name="keywords" id="keywords" placeholder="Enter Keywords" class="input-control"></textarea>
 			</div>
-			<input type="text" name="SelectCategories" class="input-control" placeholder="Select Category">
-
-			<select name="ctl00$ContentMain$DropDownListLevel" id="ctl00_ContentMain_DropDownListLevel" class="input-control" tabindex="115" required="">
-				<option value="" disabled selected>Complexity Level</option>
-				<option value="0">Beginner</option>
-				<option value="1">Intermediate</option>
-				<option value="2">Advanced</option>
-			</select>
-
-		<div class="form-group">
-				<input type="text" name="scheduleDate" class="input-control" placeholder="Schedule Date">
-				<p class="note">Select the date, you want to schedule this article on.</p>
-				<div class="icons-holder emoji-sec">
-					<img src="images/calender.png" alt="">
-				</div>
+			<div class="form-group">
+				<input type="text" name="SelectCategories" class="input-control" placeholder="Enter Category">
 			</div>
+
 
 		</form>			
 	</div>
@@ -65,7 +82,7 @@
 				Type your article contents in the below editor. Alternatively, you can cut and paste your article from a document in the Editor and format the way you like.
 			</div>
 
-					<img src="images/Image_2@2x.png" alt="" style="max-width:920px;width:95% max-width:100%; display: none; margin: auto;">
+					<!-- <img src="images/Image_2@2x.png" alt="" style="max-width:920px;width:95% max-width:100%; display: block; margin: auto;"> -->
 </div>
 
 
@@ -84,17 +101,36 @@
 
 <input type="file" name="file[]" type="file" id="FileInputUploadCode" class="hide" size="60" data-multiple-caption="{count} files selected" multiple />
 
-<label for="FileInputUploadCode"><img src="images/fileUploader.png" class="img-fileUploader" alt="">
+<label for="FileInputUploadCode">
+	<div class="img-fileUploader">
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+  <path style="fill:#E2E5E7;" d="M128,0c-17.6,0-32,14.4-32,32v448c0,17.6,14.4,32,32,32h320c17.6,0,32-14.4,32-32V128L352,0H128z"/>
+  <path style="fill:#B0B7BD;" d="M384,128h96L352,0v96C352,113.6,366.4,128,384,128z"/>
+  <polygon style="fill:#CAD1D8;" points="480,224 384,128 480,128 "/>
+  <path style="fill:#9e8c04;" d="M416,416c0,8.8-7.2,16-16,16H48c-8.8,0-16-7.2-16-16V256c0-8.8,7.2-16,16-16h352c8.8,0,16,7.2,16,16
+	V416z"/>
+  <g>
+    <path style="fill:#FFFFFF;" d="M132.64,384c-8.064,0-11.264-7.792-6.656-13.296l45.552-60.512h-37.76
+		c-11.12,0-10.224-15.712,0-15.712h51.568c9.712,0,12.528,9.184,5.632,16.624l-43.632,56.656h41.584
+		c10.24,0,11.52,16.256-1.008,16.256h-55.28V384z"/>
+    <path style="fill:#FFFFFF;" d="M212.048,303.152c0-10.496,16.896-10.88,16.896,0v73.04c0,10.608-16.896,10.88-16.896,0V303.152z"/>
+    <path style="fill:#FFFFFF;" d="M251.616,303.152c0-4.224,3.328-8.832,8.704-8.832h29.552c16.64,0,31.616,11.136,31.616,32.48
+		c0,20.224-14.976,31.488-31.616,31.488h-21.36v16.896c0,5.632-3.584,8.816-8.192,8.816c-4.224,0-8.704-3.184-8.704-8.816
+		L251.616,303.152L251.616,303.152z M268.496,310.432v31.872h21.36c8.576,0,15.36-7.568,15.36-15.504
+		c0-8.944-6.784-16.368-15.36-16.368H268.496z"/>
+</g>
+  <path style="fill:#CAD1D8;" d="M400,432H96v16h304c8.8,0,16-7.2,16-16v-16C416,424.8,408.8,432,400,432z"/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/> <g/> <g/><g/> <g/><g/>
+</svg>
+
+	</div>
 <p class="txt-fileupload">Drag a file here or <span>browse</span> for a file upload.</p>
 </label>
 
-<input type="submit" name="ctl00$ContentMain$ButtonAttachCode" value="Upload Source Code" onclick="javascript:return CheckUploadFile();" id="ButtonAttachCode" class="CommonBlueBtn btn-fileUploader" disabled="disabled">
+<input type="submit"  value="Upload Source Code" onclick="javascript:return CheckUploadFile();" id="ButtonAttachCode" class="CommonBlueBtn btn-fileUploader" disabled="disabled">
 	
 	</div>
 
-		<ol>
-			<li id="uploadlists"></li>
-		</ol>
+		<ul id="uploadlists" class="box__uploading"></ul>
 
 </div>
 </form>
@@ -103,211 +139,101 @@
 
 
 <div id="ctl00_ContentMain_divSaveButtons" class="actionBottomBtns">
-                 
-<input type="submit" name="ctl00$ContentMain$ButtonPreview" value="Preview" onclick="return false;" id="ctl00_ContentMain_ButtonPreview" class="CommonBlueBtn">
-
-<input type="submit" name="ctl00$ContentMain$ButtonFinishNow" value="Publish Now" onclick="return SetValue();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentMain$ButtonFinishNow&quot;, &quot;&quot;, true, &quot;vgCheck&quot;, &quot;&quot;, false, false))" id="ctl00_ContentMain_ButtonFinishNow" class="CommonBlueBtn btn-publish">
-
-
-<input type="submit" name="ctl00$ContentMain$ButtonSaveFinishLater" value="Save &amp; finish later" onclick="return SetValueFinishLater();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentMain$ButtonSaveFinishLater&quot;, &quot;&quot;, true, &quot;vgCheck&quot;, &quot;&quot;, false, false))" id="ctl00_ContentMain_ButtonSaveFinishLater" class="CommonBlueBtn btn-savendfinishltr">
-
-
-
-
-<input type="submit" name="ctl00$ContentMain$ButtonCancel" value="Cancel" id="ctl00_ContentMain_ButtonCancel" class="CommonBlueBtn btn-cancel">
-
-<!--                 <input type="submit" name="ctl00$ContentMain$ButtonReset" value="Reset" onclick="ResetPublishDate(); return true;" id="ctl00_ContentMain_ButtonReset" class="CommonBlueBtn"> -->
-
-            </div>
-
+                        
+                        <input type="submit" name="ctl00$ContentMain$ButtonSaveFinishLater" value="Save &amp; Finish Later" onclick="return SetValueFinishLater();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentMain$ButtonSaveFinishLater&quot;, &quot;&quot;, true, &quot;vgCheck&quot;, &quot;&quot;, false, false))" id="ctl00_ContentMain_ButtonSaveFinishLater" class="btn primary-btn" fdprocessedid="aaf8j6">
+                        <input type="submit" name="ctl00$ContentMain$ButtonFinishNow" value="Finish Now" onclick="return SetValue();WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentMain$ButtonFinishNow&quot;, &quot;&quot;, true, &quot;vgCheck&quot;, &quot;&quot;, false, false))" id="ctl00_ContentMain_ButtonFinishNow" class="btn success-btn" fdprocessedid="oqm7ep">
+                        <input type="submit" name="ctl00$ContentMain$ButtonPreview" value="Preview" onclick="return false;" id="ctl00_ContentMain_ButtonPreview" class="btn primary-btn" fdprocessedid="y40nx">
+                        <input type="submit" name="ctl00$ContentMain$ButtonCancel" value="Cancel" id="ctl00_ContentMain_ButtonCancel" class="btn secondary-btn" fdprocessedid="5hw41s">
+                        <input type="submit" name="ctl00$ContentMain$ButtonReset" value="Reset" onclick="ResetPublishDate(); return true;" id="ctl00_ContentMain_ButtonReset" class="btn warning-btn" fdprocessedid="bkwd3k">
+                        
+    
 </div>
 
 
 
-<script type="text/javascript">
 
-	'use strict';
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var form = document.querySelector('.box');
+    var input = form.querySelector('input[type="file"]');
+    var label = document.getElementById('uploadlists');
+    var btnUpload = form.querySelector('.btn-fileUploader');
+    var filesArr = [];
 
-	;( function ( document, window, index )
-	{
-		// feature detection for drag&drop upload
-		var isAdvancedUpload = function()
-			{
-				var div = document.createElement( 'div' );
-				return ( ( 'draggable' in div ) || ( 'ondragstart' in div && 'ondrop' in div ) ) && 'FormData' in window && 'FileReader' in window;
-			}();
+    function updateInputFiles() {
+        var dt = new DataTransfer();
+        filesArr.forEach(function(file) {
+            dt.items.add(file);
+        });
+        input.files = dt.files;
+        btnUpload.disabled = filesArr.length === 0;
+    }
 
+    function showFiles() {
+        label.innerHTML = '';
+        if (filesArr.length === 0) {
+            label.style.display = 'none';
+        } else {
+            label.style.display = 'block';
+            filesArr.forEach(function(file, idx) {
+                var li = document.createElement('li');
+                li.textContent = file.name;
 
-		// applying the effect for every form
-		var forms = document.querySelectorAll( '.box' );
-		Array.prototype.forEach.call( forms, function( form )
-		{
-			var input		 = form.querySelector( 'input[type="file"]' ),
-				label		 = form.querySelector( '#uploadlists' ),
-				errorMsg	 = form.querySelector( '.box__error span' ),
-				restart		 = form.querySelectorAll( '.box__restart' ),
-				droppedFiles = false,
-				showFiles	 = function( files )
-				{
-					label.textContent = files.length > 1 ? ( input.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', files.length ) : files[ 0 ].name;
-					form.querySelector('.btn-fileUploader').disabled = false;
-				},
-				triggerFormSubmit = function()
-				{
-					var event = document.createEvent( 'HTMLEvents' );
-					event.initEvent( 'submit', true, false );
-					form.dispatchEvent( event );
-				};
+                var delBtn = document.createElement('button');
+                delBtn.classList.add('btn-delete-item');
+                delBtn.title = "Delete file";
+                delBtn.onclick = function() {
+                    filesArr.splice(idx, 1);
+                    showFiles();
+                    updateInputFiles();
+                };
 
-			// letting the server side to know we are going to make an Ajax request
-			var ajaxFlag = document.createElement( 'input' );
-			ajaxFlag.setAttribute( 'type', 'hidden' );
-			ajaxFlag.setAttribute( 'name', 'ajax' );
-			ajaxFlag.setAttribute( 'value', 1 );
-			form.appendChild( ajaxFlag );
+                li.appendChild(delBtn);
+                label.appendChild(li);
+            });
+        }
+        btnUpload.disabled = filesArr.length === 0;
+    }
 
-			// automatically submit the form on file select
-			input.addEventListener( 'change', function( e )
-			{
-				showFiles( e.target.files );
+    // File input change (multi-file support)
+    input.addEventListener('change', function(e) {
+        filesArr = Array.from(e.target.files);
+        showFiles();
+        updateInputFiles();
+    });
 
-				
-				triggerFormSubmit();
+    // Drag & drop events (multi-file support)
+    form.addEventListener('dragover', function(e) {
+        e.preventDefault();
+        form.classList.add('is-dragover');
+    });
 
-				
-			});
+    form.addEventListener('dragleave', function(e) {
+        e.preventDefault();
+        form.classList.remove('is-dragover');
+    });
 
-			// drag&drop files if the feature is available
-			if( isAdvancedUpload )
-			{
-				form.classList.add( 'has-advanced-upload' ); // letting the CSS part to know drag&drop is supported by the browser
+    form.addEventListener('drop', function(e) {
+        e.preventDefault();
+        form.classList.remove('is-dragover');
+        filesArr = Array.from(e.dataTransfer.files);
+        showFiles();
+        updateInputFiles();
+    });
 
-				[ 'drag', 'dragstart', 'dragend', 'dragover', 'dragenter', 'dragleave', 'drop' ].forEach( function( event )
-				{
-					form.addEventListener( event, function( e )
-					{
-						// preventing the unwanted behaviours
-						e.preventDefault();
-						e.stopPropagation();
-					});
-				});
-				[ 'dragover', 'dragenter' ].forEach( function( event )
-				{
-					form.addEventListener( event, function()
-					{
-						form.classList.add( 'is-dragover' );
-					});
-				});
-				[ 'dragleave', 'dragend', 'drop' ].forEach( function( event )
-				{
-					form.addEventListener( event, function()
-					{
-						form.classList.remove( 'is-dragover' );
-					});
-				});
-				form.addEventListener( 'drop', function( e )
-				{
-					droppedFiles = e.dataTransfer.files; // the files that were dropped
-					showFiles( droppedFiles );
+	 // Custom radio visual selection
+    document.querySelectorAll('.custom-checkbox input[type="checkbox"]').forEach(function(radio) {
+        radio.addEventListener('change', function() {
+            document.querySelectorAll('.custom-checkbox').forEach(function(box) {
+                box.classList.remove('selected');
+            });
+            if (radio.checked) {
+                radio.parentElement.classList.add('selected');
+            }
+        });
+    });
 
-					
-					triggerFormSubmit();
-
-									});
-			}
-
-
-			// if the form was submitted
-			form.addEventListener( 'submit', function( e )
-			{
-				// preventing the duplicate submissions if the current one is in progress
-				if( form.classList.contains( 'is-uploading' ) ) return false;
-
-				form.classList.add( 'is-uploading' );
-				form.classList.remove( 'is-error' );
-
-				if( isAdvancedUpload ) // ajax file upload for modern browsers
-				{
-					e.preventDefault();
-
-					// gathering the form data
-					var ajaxData = new FormData( form );
-					if( droppedFiles )
-					{
-						Array.prototype.forEach.call( droppedFiles, function( file )
-						{
-							ajaxData.append( input.getAttribute( 'name' ), file );
-						});
-					}
-
-					// ajax request
-					var ajax = new XMLHttpRequest();
-					ajax.open( form.getAttribute( 'method' ), form.getAttribute( 'action' ), true );
-
-					ajax.onload = function()
-					{
-						form.classList.remove( 'is-uploading' );
-						if( ajax.status >= 200 && ajax.status < 400 )
-						{
-							var data = JSON.parse( ajax.responseText );
-							form.classList.add( data.success == true ? 'is-success' : 'is-error' );
-							if( !data.success ) errorMsg.textContent = data.error;
-						}
-						else alert( 'Error. Please, contact the webmaster!' );
-					};
-
-					ajax.onerror = function()
-					{
-						form.classList.remove( 'is-uploading' );
-						//alert( 'Error. Please, try again!' );
-					};
-
-					ajax.send( ajaxData );
-				}
-				else // fallback Ajax solution upload for older browsers
-				{
-					var iframeName	= 'uploadiframe' + new Date().getTime(),
-						iframe		= document.createElement( 'iframe' );
-
-						$iframe		= $( '<iframe name="' + iframeName + '" style="display: none;"></iframe>' );
-
-					iframe.setAttribute( 'name', iframeName );
-					iframe.style.display = 'none';
-
-					document.body.appendChild( iframe );
-					form.setAttribute( 'target', iframeName );
-
-					iframe.addEventListener( 'load', function()
-					{
-						var data = JSON.parse( iframe.contentDocument.body.innerHTML );
-						form.classList.remove( 'is-uploading' )
-						form.classList.add( data.success == true ? 'is-success' : 'is-error' )
-						form.removeAttribute( 'target' );
-						if( !data.success ) errorMsg.textContent = data.error;
-						iframe.parentNode.removeChild( iframe );
-					});
-				}
-			});
-
-
-			// restart the form if has a state of error/success
-			Array.prototype.forEach.call( restart, function( entry )
-			{
-				entry.addEventListener( 'click', function( e )
-				{
-					e.preventDefault();
-					form.classList.remove( 'is-error', 'is-success' );
-					input.click();
-				});
-			});
-
-			// Firefox focus bug fix for file input
-			input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
-			input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
-
-		});
-	}( document, window, 0 ));
-
+});
 </script>
 </body>
 </html>
