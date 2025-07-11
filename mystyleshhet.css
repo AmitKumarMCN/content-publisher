@@ -391,7 +391,7 @@ select.input-control:invalid {
 
 .box__uploading {
     background-color: rgb(10 22 49);
-    padding: 15px;
+    padding: 15px 15px 10px;
     border-radius: 6px;
     margin-top: 20px;
 	list-style: none;
@@ -406,6 +406,7 @@ select.input-control:invalid {
 	border: 1px solid var(--bdrColor);
 	border-radius: 5px;
 	position: relative;
+	margin-bottom: 5px;
 }
 .btn-delete-item{
 	position: absolute;
